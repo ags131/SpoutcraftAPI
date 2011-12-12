@@ -209,5 +209,20 @@ public interface LivingEntity extends Entity {
 	 * @param ticks NoDamageTicks
 	 */
 	public void setNoDamageTicks(int ticks);
-
+        /**
+         * Gets the gravity multiplier for this entity.
+         * Default gravity modifier is 1
+         * @return gravity multiplier
+         */
+        public double getGravityMultiplier();
+        /**
+         * Modifies the effects of gravity on the player's y axis movement.
+         * Ex: setGravityMultiplier(10) will cause players to fall ten times
+         * faster than normal.
+         * Warning, large modifiers may trigger fly-hack warnings.
+         * Default gravity multiplier is 1 
+         * 
+         * @param multiplier to set
+         */
+        public void setGravityMultiplier(double multiplier);
 }
